@@ -4,10 +4,19 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: directory
+  path: _includes/content/en
+  label: Engelse FAQ-teksten
+  create: all
+  match: "**/*"
+- type: directory
+  path: _includes/content
+  label: Nederlandse FAQ-teksten
+  create: all
+  match: "*.md"
 - type: document
   path: _data/translations.yml
   label: Translations.yml
-  match: "**/*"
 - type: jekyll-pages
   label: Pages
   create: all
